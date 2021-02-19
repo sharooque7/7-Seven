@@ -1,0 +1,67 @@
+1--->HTTP /0.9 vs 1.0 vs 1.1 vs 2
+
+HTTP/0.9
+  --only get method
+  --no status code
+  --no version
+HTTP /1.0
+  --version appended at every response
+  --status code to know for success/failure for every 
+    request/  respose
+  --HTTP Headers introduced containing meta data for 
+    request and response
+  --headers allowed to transmit images and others than 
+    only plaintext
+HTTP /1.1
+  --connection can be reused,saves time
+  --pipeline added so sending multiple request even before first 
+    request transitted
+  --large data transmitted(chunked) 
+  --chache added
+  --language/encoding/type introduced
+  --Host Header (different domain can be hoasted on same IP)
+  --multiple request needed to open(for every data like 
+    image css js)
+HTTp /2
+  --Multiplexing(one connection multiple data can be send)
+    Eg(img1+css+js+img2)
+  --Server Push(server will push(css js images) to client 
+    autoatically)
+  --Header compression
+  --Binary format
+  --security(TLS 1.2)
+  
+2--->Difference Between Node js and Browser js
+	--Node js is javascript runtime enviroinment for backend application 
+	  while brower js is for frontend for client side application
+	--some browser objecsts like window object,document object
+	  are not available in node js
+	--Both uses JavaScript language
+	--Node js is server side scripting and Browser js is 
+	  client side scripting
+	--full user-level syste access in node js whereas in browser js
+	  the js is secured and not have leveraged access
+	  
+3--->what happens when you hit url in browser
+	When we hit a url in browser the browser will check for the ip address 
+	of the domain name in caches(browser,os,router or isp ) and will send
+	back the IP to the browser .Then the browser will establish tcp
+	connection and now HTTP request will be made by browser
+	for that server will send the response and browser displays web page.
+	  
+4--->Copy By Value and Reference
+        --In primitive data type the values are directly copied to the 
+          varibale name so variable contain value not address
+        --whereas in composite data type the values are stored in memory
+          and the address is copied to the variable.
+          
+5--->How to copy by value a composite data type (array+objects). 
+	--spread(...) operator
+	--Object.assign() method
+	--JSON.stringify()(JS object to JSON sring) and
+	  JSON.parse()(JSON string to JS object)
+	var a=[1,2,3]
+	-var b=[...a];
+	-var b=Object.assign([],a);
+	-var b=JSON.parse(JSON.stringify(a));
+	  
